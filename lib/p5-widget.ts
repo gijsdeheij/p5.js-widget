@@ -100,6 +100,7 @@ function replaceScriptWithWidget(el: HTMLScriptElement) {
   let previewWidth = parseInt(el.getAttribute('data-preview-width'));
   let baseSketchURL = absoluteURL(el.getAttribute('data-base-url'));
   let p5version = el.getAttribute('data-p5-version');
+  let editorLayout = el.getAttribute('data-editor-layout');
   let maxRunTime = parseInt(el.getAttribute('data-max-run-time'));
   let autoplay = el.hasAttribute('data-autoplay');
   let url;
@@ -131,6 +132,10 @@ function replaceScriptWithWidget(el: HTMLScriptElement) {
 
   if (p5version) {
     qsArgs.push('p5version=' + encodeURIComponent(p5version));
+  }
+
+  if (editorLayout) {
+    qsArgs.push('editorLayout=' + encodeURIComponent(editorLayout));
   }
 
   if (autoplay) {

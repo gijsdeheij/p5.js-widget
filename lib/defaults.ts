@@ -1,4 +1,5 @@
-export const P5_VERSION = '0.4.23';
+export const P5_VERSION = '1.0.0';
 export const PREVIEW_WIDTH = 150;
 export const HEIGHT = 300;
 export const MAX_RUN_TIME = 1000;
+export const EDITOR_LAYOUT = 'horizontal';

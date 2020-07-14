@@ -92,6 +92,9 @@ a.p5-logo img {
   border-top: 1px solid var(--dark-pink);
 }
 
+[data-editor-layout="vertical"] .panes {
+  flex-direction: column;
+}
 
 .panes .editor-holder {
   flex: 1;
@@ -116,6 +119,10 @@ a.p5-logo img {
 .panes .preview-holder-wrapper iframe {
   flex: 1;
   border: none;
+}
+
+[data-editor-layout="vertical"] .panes .preview-holder-wrapper iframe {
+  width: initial !important; /* In vertical layout mode show preview as full width */
 }
 
 .CodeMirror {

@@ -21,6 +21,7 @@ function start() {
   let autoplay = (qs['autoplay'] === 'on');
   let initialContent = qs['sketch'] || defaultSketchJS;
   let p5version = qs['p5version'] || defaults.P5_VERSION;
+  let editorLayout = qs['editorLayout'] || defaults.EDITOR_LAYOUT;
   let previewWidth = parseInt(qs['previewWidth']);
   let maxRunTime = parseInt(qs['maxRunTime'])
   if (isNaN(previewWidth)) {
@@ -37,6 +38,7 @@ function start() {
     <App initialContent={initialContent}
          autosaver={new SessionStorageAutosaver(id)}
          baseSketchURL={baseSketchURL}
+         editorLayout={editorLayout}
          p5version={p5version}
          previewWidth={previewWidth}
          maxRunTime={maxRunTime}

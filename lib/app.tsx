@@ -14,6 +14,7 @@ interface ErrorMessage {
 interface AppProps {
   initialContent: string,
   previewWidth: number,
+  editorLayout: string,
   p5version: string,
   maxRunTime: number,
   baseSketchURL: string,
@@ -126,7 +127,7 @@ export default class App extends PureComponent<AppProps, AppState> {
     }
 
     return (
-      <div className="app">
+      <div className="app" data-editor-layout={this.props.editorLayout}>
         <Toolbar
          onPlayClick={this.handlePlayClick}
          onStopClick={this.state.isPlaying && this.handleStopClick}
